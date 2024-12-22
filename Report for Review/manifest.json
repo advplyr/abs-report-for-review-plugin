@@ -1,0 +1,114 @@
+{
+  "id": "539693ee-9e9d-4091-8841-1713d9236ad8",
+  "name": "Report for Review",
+  "version": "1.0.0",
+  "owner": "advplyr",
+  "repositoryUrl": "https://github.com/advplyr/abs-report-for-review-plugin",
+  "documentationUrl": "https://github.com/advplyr/abs-report-for-review-plugin",
+  "description": "Allow users to report items for review",
+  "descriptionKey": "ReportForReviewDescription",
+  "extensions": [
+    {
+      "target": "item.detail.actions",
+      "name": "report",
+      "label": "Report",
+      "labelKey": "LabelReport",
+      "restrictToAccountTypes": ["user", "admin", "root"],
+      "prompt": {
+        "message": "Report Reason",
+        "messsageKey": "LabelReportReason",
+        "formFields": [
+          {
+            "name": "reason",
+            "label": "Reason",
+            "labelKey": "LabelReason",
+            "type": "select",
+            "options": [
+              {
+                "text": "Explicit",
+                "textKey": "LabelReasonExplicit",
+                "value": "explicit"
+              },
+              {
+                "text": "Incorrect metadata",
+                "textKey": "LabelReasonIncorrectMetadata",
+                "value": "incorrectMetadata"
+              },
+              {
+                "text": "Audio issue",
+                "textKey": "LabelAudioIssue",
+                "value": "audioIssue"
+              },
+              {
+                "text": "Mismatched",
+                "textKey": "LabelMismatched",
+                "value": "mismatched"
+              }
+            ]
+          },
+          {
+            "name": "comments",
+            "label": "Comments",
+            "labelKey": "LabelComments",
+            "type": "textarea"
+          }
+        ]
+      }
+    },
+    {
+      "target": "item.detail.actions",
+      "name": "fixed",
+      "label": "Fixed",
+      "labelKey": "LabelFixed",
+      "restrictToAccountTypes": ["admin", "root"],
+      "prompt": {
+        "message": "This will remove all needs review tags and the reported by description. Are you sure?",
+        "messageKey": "ConfirmFixedAction"
+      }
+    }
+  ],
+  "config": {
+    "description": "When an item is reported a tag is added to the item and a notification is sent to the administrators",
+    "descriptionKey": "PluginConfigDescription",
+    "formFields": [
+      {
+        "name": "requestAddress",
+        "label": "Request Address",
+        "labelKey": "LabelRequestAddress",
+        "type": "text"
+      },
+      {
+        "name": "updateDescription",
+        "label": "Update Description",
+        "labelKey": "LabelUpdateDescription",
+        "type": "checkbox"
+      }
+    ]
+  },
+  "localization": {
+    "de": {
+      "ReportForReviewDescription": "Allow users to report items for review",
+      "LabelReport": "Report",
+      "LabelReportReason": "Report Reason",
+      "LabelReason": "Reason",
+      "LabelReasonExplicit": "Explicit",
+      "LabelReasonIncorrectMetadata": "Incorrect metadata",
+      "LabelAudioIssue": "Audio issue",
+      "LabelMismatched": "Mismatched",
+      "LabelComments": "Comments",
+      "PluginConfigDescription": "When an item is reported a tag is added to the item and a notification is sent to the administrators",
+      "LabelRequestAddress": "Request Address",
+      "LabelUpdateDescription": "Update Description",
+      "LabelFixed": "Fixed",
+      "ConfirmFixedAction": "This will remove all needs review tags and the reported by description. Are you sure?"
+    }
+  },
+  "releases": [
+    {
+      "version": "1.0.0",
+      "changelog": "Initial release",
+      "timestamp": "2022-01-01T00:00:00Z",
+      "sourceUrl": ""
+    }
+  ]
+}
