@@ -1,7 +1,7 @@
 {
   "id": "539693ee-9e9d-4091-8841-1713d9236ad8",
   "name": "Report for Review",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "owner": "advplyr",
   "repositoryUrl": "https://github.com/advplyr/abs-report-for-review-plugin",
   "documentationUrl": "https://github.com/advplyr/abs-report-for-review-plugin",
@@ -68,7 +68,7 @@
     }
   ],
   "config": {
-    "description": "When an item is reported a tag is added to the item and a notification is sent to the administrators",
+    "description": "When an item is reported a 'Needs Review' tag is added to the item and a tag showing the reported reason. If enabled, the description is updated with the username, reason and comments. If a request address is supplied a POST request will be sent to the address with data about the report.",
     "descriptionKey": "PluginConfigDescription",
     "formFields": [
       {
@@ -104,6 +104,12 @@
     }
   },
   "releases": [
+    {
+      "version": "1.0.1",
+      "changelog": "Updated the config description",
+      "timestamp": "2024-12-22T21:05:00Z",
+      "downloadUrl": "https://github.com/advplyr/abs-report-for-review-plugin/releases/download/v1.0.1/Report.for.Review.zip"
+    },
     {
       "version": "1.0.0",
       "changelog": "Initial release",
